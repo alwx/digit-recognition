@@ -20,11 +20,13 @@ class RecognizeFrame < Wx::Frame
     files = Dir['images/*.jpg']
     countfiles = files.size
 
+    # todo teach button fix
     # teach button
     label = Wx::StaticText.new(panel, :label => "Всего #{countfiles} файлов", :pos => [15, 16])
     teach_bt = Wx::Button.new(panel, :label => 'Учить', :pos => [135, 10])
     evt_button(teach_bt) { teach }
 
+    # todo: field for text fix
     # field for text
     search_bt = Wx::Button.new(panel, :label => 'Распознать из файла', :pos => [10, 50], :size => [210, 28])
     @fd = Wx::FileDialog.new(panel, :label => 'Выберите изображение')
@@ -34,12 +36,14 @@ class RecognizeFrame < Wx::Frame
   end
 
   # teach model
+  # todo: model fix
   def teach 
     t = Teacher.new(@model)
     t.teach  
   end
 
   # recognize
+  # FIXME: improve recognizer
   def recognize
     if @fd.show_modal == Wx::ID_OK
       # load file  
