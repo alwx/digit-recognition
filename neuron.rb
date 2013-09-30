@@ -6,6 +6,7 @@ include Wx
 include Magick
 
 
+# TODO new todo
 # wxWindow frame
 class RecognizeFrame < Wx::Frame
   def initialize
