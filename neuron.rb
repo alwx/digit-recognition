@@ -12,7 +12,7 @@ class RecognizeFrame < Wx::Frame
   def initialize
     @model = Model.new(10, 64 * 64)
 
-    super(nil,  :title => "Распознавание цифр", // todo replace by *something*
+    super(nil,  :title => "Распознавание цифр", # ToDo replace by *something*
                 :pos => DEFAULT_POSITION, 
                 :size => [230, 92],
                 :style => CAPTION | CLOSE_BOX | CLIP_CHILDREN)
