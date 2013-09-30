@@ -39,7 +39,7 @@ class RecognizeFrame < Wx::Frame
   # teach model
   # todo: model fix
   def teach 
-    t = Teacher.new(@model)
+    t = Teacher.new(@model) # todo must be deprecated **(as soon as possible)**
     t.teach  
   end
 
